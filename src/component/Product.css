@@ -1,8 +1,11 @@
-
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Smaller cards = more per row */
-  gap: 18px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
 }
 
 .product-card {
@@ -12,7 +15,7 @@
   border-radius: 8px;
   text-align: center;
   transition: 0.25s ease;
-  height: 220px; /* Compact height */
+  height: 230px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,20 +36,21 @@
   font-size: 13px;
   color: #333;
   font-weight: 500;
-  height: 34px;        /* Fit only 2 lines */
+  height: 36px;
   overflow: hidden;
   margin: 0;
 }
 
 .price {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   color: #0b8c2f;
   margin: 4px 0;
 }
 
 .btn-cart,
-.btn-buy {
+.btn-buy,
+.btn-buy-product {
   padding: 6px;
   font-size: 12px;
   border-radius: 6px;
@@ -54,6 +58,13 @@
   cursor: pointer;
   margin-top: 6px;
   width: 100%;
+}
+.btn-buy-product {
+  background-color:#198754;
+}
+
+.btn-buy {
+  width: 300px;
 }
 
 .btn-cart {
@@ -66,3 +77,229 @@
   color: white;
 }
 
+.buy-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  background: #f3f3f3;
+  min-height: 100vh;
+}
+
+.buy-left {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.buy-img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.buy-details-box {
+  margin-top: 25px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.buy-desc {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.sub-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.buy-right {
+  width: 350px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.buy-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.buy-price {
+  font-size: 24px;
+  color: #b12704;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.buy-delivery {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #007600;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.buy-stock {
+  color: #007600;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.cart-buy-now{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-box {
+  background: #fff7e0;
+  border: 1px solid #ffce56;
+  padding: 0 15px 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.offer-box ul {
+  padding-left: 18px;
+}
+
+.offer-list li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.buy-btn-yellow {
+  width: 100%;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.buy-btn-yellow:hover {
+  background: #f7ca00;
+}
+
+.buy-btn-orange {
+  width: 100%;
+  background: #ffa41c;
+  border: 1px solid #ff8f00;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.buy-btn-orange:hover {
+  background: #ff8f00;
+}
+
+.secure-text {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+
+.cart-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cart-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cart-item-box {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.cart-img {
+  width: 180px;
+  height: auto;
+}
+
+.cart-info {
+  flex: 1;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cart-price {
+  color: #b12704;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.cart-stock {
+  color: #007600;
+  font-weight: 600;
+}
+
+.cart-desc {
+  width: 300px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;      /* show only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;    /* add ... */
+  font-size: 14px;
+  color: #444;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.btn-remove {
+  padding: 10px 16px;
+  border: 1px solid #c45500;
+  background: white;
+  color: #c45500;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-remove:hover {
+  background: #fff4e5;
+}

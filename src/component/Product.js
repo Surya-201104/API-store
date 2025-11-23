@@ -18,7 +18,7 @@ function Products() {
 
   return (
     <div className="product-container">
-      <h3>Products</h3>
+      {products.length === 0 && <h3>Products are Loading...</h3>}
 
       <div className="product-grid">
         {products.map((item) => (
@@ -39,7 +39,7 @@ function Products() {
               to={`/buynow/${item.id}`}
               onClick={() => saveProduct(item)} // ✅ store details
             >
-              <button className="btn-buy">Buy Now</button>
+              <button className="btn-buy-product">Buy Now</button>
             </Link>
           </div>
         ))}

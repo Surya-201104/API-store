@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <header className="App-header">
-          <h2>API store</h2>
+          <h2>SK Shops</h2>
 
           <Routes>
             {/* 🏠 Home page - product listing */}
